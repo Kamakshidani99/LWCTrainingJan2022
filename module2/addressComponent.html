@@ -1,0 +1,41 @@
+<template>
+    <lightning-card variant="Custom">
+        <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-large-size_1-of-12"></div>
+                <div class="slds-col slds-large-size_4-of-12">
+                <lightning-card variant="Custom" style="color:dodgerblue;" title="Permanent Address">
+
+                    <div>
+                        <h3 style="color:black; font-size:x-small">Enter permanent address as govt Id Proof</h3>
+                    </div>
+                    <lightning-input type="text" style="color:rgb(226, 26, 26); background-color:aquamarine" label="Address Line 1" value={address1}
+                        onchange={address1Change}></lightning-input>
+                    <lightning-input type="text" style="color:black; background-color:aquamarine"  label="Address Line 2" value={address2}
+                        onchange={address2Change}></lightning-input>
+                    <lightning-input type="text" style="color:black; background-color:aquamarine" label="Landmark" value={landmark}
+                        onchange={landmarkChange}></lightning-input>
+                    <lightning-input type="number" style="color:black; background-color:aquamarine" label="Zip Code" value={zipCode}
+                        onchange={zipCodeChange}></lightning-input>
+                </lightning-card>
+            </div>
+            <div class="slds-col slds-large-size_1-of-12"></div>
+            <div class="slds-col slds-large-size_4-of-12">
+                <lightning-card variant="Custom" style="color:dodgerblue;" title="Current Address">
+                    <div>
+                        <lightning-input type="checkbox" variant="Custom" name="sameOfPermanent" style="color:dodgerblue; font-size:0ch" label="Same as Permanent Address"
+                            onchange={sameOfPermanentChanged} value={sameOfPermanent}></lightning-input>
+                    </div>
+                    <lightning-input type="text" style="color:black; background-color:aquamarine" label="Address Line 1" value={currentaddress1}
+                        disabled={sameOfPermanent}></lightning-input>
+                    <lightning-input type="text" style="color:black; background-color:aquamarine" label="Address Line 2" value={currentaddress2}
+                        disabled={sameOfPermanent}></lightning-input>
+                    <lightning-input type="text" style="color:black; background-color:aquamarine" label="Landmark" value={currentlandmark}
+                        disabled={sameOfPermanent}></lightning-input>
+                    <lightning-input type="number" style="color:black; background-color:aquamarine" label="Zip Code" value={currentzipCode}
+                        disabled={sameOfPermanent}></lightning-input>
+                </lightning-card>
+            </div>
+            <div class="slds-col slds-large-size_1-of-12"></div>
+        </div>
+    </lightning-card>
+</template>
