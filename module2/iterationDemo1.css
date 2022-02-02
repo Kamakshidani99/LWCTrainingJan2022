@@ -1,0 +1,13 @@
+div{
+    
+    color: solid black;
+}
+.list1 {
+    border-top: 1px solid black;
+    padding-top: 5px;
+}
+
+.list2{
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+}
